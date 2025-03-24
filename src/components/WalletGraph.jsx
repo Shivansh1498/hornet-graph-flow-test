@@ -26,10 +26,11 @@ const WalletGraph = () => {
           nodes.set(sender, {
             name: sender,
             value: sender,
-            symbolSize: 120,
+            symbolSize: 140,
+            draggable: true,
             fixed: true,
-            x: Math.random() * 800,
-            y: Math.random() * 600,
+            x: Math.random() * 1200,
+            y: Math.random() * 800,
             itemStyle: { color: "#3498db" },
             walletData: {
               address: sender,
@@ -49,14 +50,16 @@ const WalletGraph = () => {
             },
           });
         }
+
         if (!nodes.has(receiver)) {
           nodes.set(receiver, {
             name: receiver,
             value: receiver,
-            symbolSize: 120,
+            symbolSize: 140,
+            draggable: true,
             fixed: true,
-            x: Math.random() * 800,
-            y: Math.random() * 600,
+            x: Math.random() * 1200,
+            y: Math.random() * 800,
             itemStyle: { color: "#e74c3c" },
             walletData: {
               address: receiver,
@@ -81,7 +84,15 @@ const WalletGraph = () => {
           source: sender,
           target: receiver,
           value: amount,
-          lineStyle: { color: "#f1c40f", width: 2 },
+          lineStyle: {
+            color: "#f1c40f",
+            width: 2,
+            curveness: 0.3,
+          },
+          symbol: ["none", "arrow"],
+          emphasis: {
+            lineStyle: { width: 3 },
+          },
         });
       });
     });
@@ -140,7 +151,7 @@ const WalletGraph = () => {
   }, [graphData]);
 
   return (
-    <div style={{ width: "100%", height: "calc(100vh - 36px - 20px - 20px)" }}>
+    <div style={{ width: "100%", height: "calc(100vh - 36px - 40px)" }}>
       <ReactECharts option={chartOptions} style={{ height: "100%" }} />
     </div>
   );
