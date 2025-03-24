@@ -1,12 +1,12 @@
 import "./App.css";
 import Sidebar from "./components/Sidebar";
-import WalletGraph from "./components/WalletGraph";
+import WalletGraphPage from "./components/WalletGraphPage";
 
 const App = () => {
   return (
     <main className="hornetContainer">
       <Sidebar />
-      <WalletGraph />
+      <WalletGraphPage />
     </main>
   );
 };

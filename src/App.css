@@ -29,9 +29,20 @@ body.dark-mode {
   transition: all ease-in-out 200ms;
 
   .sidebarContainer {
+    width: 350px;
     min-width: 350px;
     background-color: var(--bg-secondary-color);
-    padding: 20px 30px;
+    padding-inline: 30px;
+    height: 100vh;
+    overflow: hidden auto;
+
+    .header {
+      padding-top: 20px;
+      position: sticky;
+      top: 0px;
+      z-index: 1;
+      background-color: var(--bg-secondary-color);
+    }
 
     form {
       margin-top: 20px;
@@ -80,6 +91,18 @@ body.dark-mode {
           border-color: var(--btn-bg-primary-color);
           border-bottom-width: "2px";
         }
+      }
+    }
+
+    ul.transactionList {
+      list-style: none;
+      > li {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--border-primary-color);
       }
     }
   }
