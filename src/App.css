@@ -1,0 +1,108 @@
+:root {
+  --bg-primary-color: #ffffff;
+  --bg-secondary-color: #f0f0f0;
+  --text-primary-color: #121212;
+  --text-secondary-color: #444444;
+  --btn-bg-primary-color: #007bff;
+  --btn-text-primary-color: #ffffff;
+  --input-primary-bg-color: #e4dada;
+  --input-primary-text-color: #333333;
+  --border-primary-color: #e4dada;
+}
+
+body.dark-mode {
+  --bg-primary-color: #000;
+  --bg-secondary-color: #282828;
+  --text-primary-color: #dcf1da;
+  --text-secondary-color: #282828;
+  --btn-bg-primary-color: #fadc19;
+  --btn-text-primary-color: #282828;
+  --input-primary-bg-color: #414141;
+  --input-primary-text-color: #a3a3a6;
+  --border-primary-color: #414141;
+}
+
+.hornetContainer {
+  display: flex;
+  min-height: 100dvh;
+  color: var(--text-primary-color);
+  transition: all ease-in-out 200ms;
+
+  .sidebarContainer {
+    min-width: 350px;
+    background-color: var(--bg-secondary-color);
+    padding: 20px 30px;
+
+    form {
+      margin-top: 20px;
+      .searchInputContainer {
+        > div {
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          input {
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            color: var(--input-primary-text-color);
+            background-color: var(--input-primary-bg-color);
+          }
+          button[type="submit"] {
+            padding: 10px;
+            border: none;
+            margin-left: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--btn-text-primary-color);
+            background-color: var(--btn-bg-primary-color);
+          }
+        }
+      }
+    }
+
+    .tabSection {
+      margin-top: 20px;
+      display: flex;
+
+      > button {
+        all: unset;
+        cursor: pointer;
+        flex: 1;
+        border-bottom: 1px solid var(--border-primary-color);
+        text-align: center;
+        padding-block: 10px;
+        text-transform: uppercase;
+
+        &.active {
+          color: var(--btn-bg-primary-color);
+          border-color: var(--btn-bg-primary-color);
+          border-bottom-width: "2px";
+        }
+      }
+    }
+  }
+
+  .walletGraphContainer {
+    padding: 20px 30px;
+    width: calc(100% - 350px);
+    background-color: var(--bg-primary-color);
+
+    .walletGraphHeader {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+
+      > button {
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: var(--btn-text-primary-color);
+        background-color: var(--btn-bg-primary-color);
+      }
+    }
+  }
+}
