@@ -27,7 +27,7 @@ const Sidebar = () => {
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 900);
-      if (window.innerWidth > 900) setIsSidebarOpen(false); // Ensure sidebar stays open on larger screens
+      if (window.innerWidth > 900) setIsSidebarOpen(false);
     };
 
     window.addEventListener("resize", handleResize);

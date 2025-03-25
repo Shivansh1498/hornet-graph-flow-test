@@ -12,6 +12,7 @@ This project is a **Wallet Transactions Explorer** that allows users to input a 
 - 🎨 **Dark Mode & Light Mode Support**
 - 📱 **Fully Responsive with Sidebar Toggle**
 - 🖱️ **Draggable Wallet Nodes** for better visualization and interaction
+- 📸 **Capture PNG Screenshots** of the current website state for easy sharing and analysis
 
 ---
 
